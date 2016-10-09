@@ -14,13 +14,11 @@ no surprises happen after their deployment.
 * a [Coq repo](https://github.com/pirapira/evmverif) and [screencast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
 
-## Paths
-
-### Verify EVM Byteodes (Currently Being Followed)
+## Path a: Verify EVM Byteodes (Currently Being Followed)
 
 The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository.
 
-#### Obstacles
+### Obstacles
 
 * Coq proofs are currently [lengthy](https://github.com/pirapira/evmverif/blob/master/coq/example/managed_account_with_accumulators.v#L405).
     - I believe Isabelle/HOL provides much easier user experience (because it has a well-polished machine word library).  I'm porting the Coq attempt [into Isabelle/HOL](https://github.com/pirapira/eth-isabelle) (70% done within 2 days).
@@ -30,7 +28,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
     - I can locally say `sorry` or `admit` to indicate that I give up proofs whenever I have to prove `keccak(a) != keccak(b)` because `a != b`.  Then the proofs would be incomplete and I cannot call my results "theorems", but I'm happy that way.  Anyway the compiler assumes no hash collisions without logical justification (but empirical).
 	- The module system of Coq provides [a clever workaround](https://github.com/bitemyapp/ledgertheory/blob/master/CryptoHashes.v).
 
-#### Steps on this path
+### Steps on Path a
 
 1. try Isabelle/HOL to see if proofs are really 5 times easier there
 2. choose Coq or Isabelle/HOL
@@ -41,17 +39,17 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 7. verify the name registrar for some desired safety properties
 
 
-### Verify Solidity Programs (This One Takes Longer Time)
+## Path b. Verify Solidity Programs
 
 One way would be to veryfy Solidity sources somehow,
 not looking at the EVM bytecode.
 
-#### Obstacles
+### Obstacles
 
 * The only way to know the meaning of a Solidity program is to compile it into bytecodes.
 * The Solidity compiler is changing fast and the verification tools would need to follow the changes
 
-#### Steps on this path
+### Steps on this path
 
 The steps that have to be taken:
 
@@ -59,12 +57,14 @@ The steps that have to be taken:
 2. Check the above against the reality.  We need a big set of tests to compare the above translation against the bytecode.
 
 
-### A Safe Programming Language
+## Path c. A Safe Programming Language
+
+This alone does not verify smart contracts, but I have a chance to make it static analyzer friendly.
 
 The [bamboo copiler](https://github.com/pirapira/bamboo) is now producing snippets of bytecode for the empty contract (still lots to be done).
 
 The language has
-* no loops
+* no loops or recursions
     - this makes life much easier for static analyzers
     - gas consumption is stabler
     - users would need to call it again and again
