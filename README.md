@@ -14,7 +14,17 @@ no surprises happen after their deployment.
 * a [Coq repo](https://github.com/pirapira/evmverif) and a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
 
-## Path a: Verification of EVM Bytecodes (Currently Being Followed)
+## The rest of the page
+
+* [Verification of EVM bytecodes](https://github.com/pirapira/ethereum-formal-verification-overview#path-a-verify-evm-bytecodes-currently-being-followed)
+* [Verification of Solidity Programs](https://github.com/pirapira/ethereum-formal-verification-overview#path-b-verify-solidity-programs)
+* [A Safe Programming Language](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-a-safe-programming-language)
+* [Dr-Y's contract analyzer](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-a-safe-programming-language)
+* [Transaction visualization](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-transaction-visualization)
+
+
+
+## Path a: Verification of EVM bytecodes (currently followed)
 
 One way is to look at the EVM bytecodes.  They are executed on a simple virtual machine.  The rules of the virtual machine is well understood by different Ethereum clients which usually match (otherwise they fix the difference with uttermost priority).
 The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository, and there is a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz).
@@ -42,7 +52,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 8. try to automate the process of verification / finding vulnerabilities (3 months)
 
 
-## Path b. Verification of Solidity Programs
+## Path b: Verification of Solidity programs
 
 Another way would be to verify Solidity sources somehow,
 not looking at the EVM bytecode.
@@ -65,7 +75,7 @@ The steps that have to be taken:
 
 
 
-## Sideway. A Safe Programming Language
+## Sideway: a safe programming language
 
 This alone does not verify smart contracts, but I have a chance to make it static analyzer friendly.
 
@@ -85,13 +95,13 @@ The language has
 It is inspired by an existing language but I will talk about it when it's actually working.
 
 
-## Sideway. Dr-Y's contract analyzer
+## Sideway: Dr-Y's contract analyzer
 
 The [contract analyzer](https://github.com/pirapira/dry-analyzer) needs an overhaul in the functionality and the UX.
 I want to see the meaning of each basic block, and how the execution can jump around the basic blocks.
 
 
-## Sideway. Transaction visualization
+## Sideway: transaction visualization
 
 A quick hack [to visualize the dataflow in a transaction](https://github.com/pirapira/vmtrace_enricher).
 This is useful after a surprise.
