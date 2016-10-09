@@ -17,7 +17,7 @@ no surprises happen after their deployment.
 ## Path a: Verify EVM Byteodes (Currently Being Followed)
 
 One way is to look at the EVM bytecodes.  They are executed on a simple virtual machine.  The rules of the virtual machine is well understood by different Ethereum clients which usually match (otherwise they fix the difference with uttermost priority).
-The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository.
+The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository, and there is a [screencast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz).
 
 ### Obstacles
 
