@@ -5,7 +5,7 @@ This is the start page about my efforts around smart contract verification.
 ## Goal
 
 The goal is to establish a method how to verify a smart contract so that
-no surprises happen after the deployment.
+no surprises happen after their deployment.
 
 ## Links
 
@@ -36,8 +36,9 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 2. choose Coq or Isabelle/HOL
 3. verify `Deed` and some other simple bytecode programs against simple properties
 4. develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5))
-5. modify Solidity to output such assertions between opcodes
-6. verify the name registrar for some desired safety properties
+5. cover all opcodes
+6. modify Solidity to output such assertions between opcodes
+7. verify the name registrar for some desired safety properties
 
 
 ### Verify Solidity Programs (This One Takes Longer Time)
