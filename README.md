@@ -89,3 +89,9 @@ It is inspired by an existing language but I will talk about it when it's actual
 
 The [contract analyzer](https://github.com/pirapira/dry-analyzer) needs an overhaul in the functionality and the UX.
 I want to see the meaning of each basic block, and how the execution can jump around the basic blocks.
+
+
+## Sideway. Transaction visualization
+
+A quick hack [to visualize the dataflow in a transaction](https://github.com/pirapira/vmtrace_enricher).
+This is useful after a surprise.
