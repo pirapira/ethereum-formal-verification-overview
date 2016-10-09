@@ -16,6 +16,7 @@ no surprises happen after their deployment.
 
 ## Path a: Verify EVM Byteodes (Currently Being Followed)
 
+One way is to look at the EVM bytecodes.  They are executed on a simple virtual machine.  The rules of the virtual machine is well understood by different Ethereum clients which usually match (otherwise they fix the difference with uttermost priority).
 The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository.
 
 ### Obstacles
@@ -43,7 +44,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 
 ## Path b. Verify Solidity Programs
 
-One way would be to veryfy Solidity sources somehow,
+Another way would be to veryfy Solidity sources somehow,
 not looking at the EVM bytecode.
 
 ### Obstacles
