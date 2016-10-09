@@ -65,7 +65,7 @@ The steps that have to be taken:
 
 
 
-## Path c. A Safe Programming Language
+## Sideway. A Safe Programming Language
 
 This alone does not verify smart contracts, but I have a chance to make it static analyzer friendly.
 
@@ -83,3 +83,9 @@ The language has
 * explcit storage setting at every exit
 
 It is inspired by an existing language but I will talk about it when it's actually working.
+
+
+## Sideway. Dr-Y's contract analyzer
+
+The [contract analyzer](https://github.com/pirapira/dry-analyzer) needs an overhaul in the functionality and the UX.
+I want to see the meaning of each basic block, and how the execution can jump around the basic blocks.
