@@ -9,7 +9,7 @@ no surprises happen after their deployment.
 
 ## Links
 
-* a [gitter channel](https://gitter.im/ethereum/formal-methods)
+* _every update comes here_: a [gitter channel](https://gitter.im/ethereum/formal-methods)
 * [Solidity](https://gitter.im/ethereum/solidity/)
 * a [Coq repo](https://github.com/pirapira/evmverif) and a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
