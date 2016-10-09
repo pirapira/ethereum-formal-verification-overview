@@ -1,4 +1,4 @@
-# Formal Verification of Smart Contracts
+# Overview: Formal Verification of Smart Contracts (my projects only for now)
 
 This is the start page about my efforts around smart contract verification.
 
