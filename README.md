@@ -7,7 +7,14 @@ This is the start page about my efforts around smart contract verification.
 The goal is to establish a method how to verify a smart contract so that
 no surprises happen after the deployment.
 
-## Strategies
+## Links
+
+* a [gitter channel](https://gitter.im/ethereum/formal-methods)
+* [Solidity](https://gitter.im/ethereum/solidity/)
+* a [Coq repo](https://github.com/pirapira/evmverif) and [screencast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
+* an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
+
+## Paths
 
 ### Verify EVM Byteodes (Currently Being Followed)
 
