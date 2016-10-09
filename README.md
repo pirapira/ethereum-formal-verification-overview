@@ -16,11 +16,11 @@ no surprises happen after their deployment.
 
 ## The rest of the page
 
-* [Verification of EVM bytecodes](https://github.com/pirapira/ethereum-formal-verification-overview#path-a-verify-evm-bytecodes-currently-being-followed)
-* [Verification of Solidity Programs](https://github.com/pirapira/ethereum-formal-verification-overview#path-b-verify-solidity-programs)
-* [A Safe Programming Language](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-a-safe-programming-language)
-* [Dr-Y's contract analyzer](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-a-safe-programming-language)
-* [Transaction visualization](https://github.com/pirapira/ethereum-formal-verification-overview#sideway-transaction-visualization)
+* [Verification of EVM bytecodes](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#path-a-verification-of-evm-bytecodes-currently-followed)
+* [Verification of Solidity Programs](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#path-b-verification-of-solidity-programs)
+* [A Safe Programming Language](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-a-safe-programming-language)
+* [Dr-Y's contract analyzer](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-dr-ys-contract-analyzer)
+* [Transaction visualization](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-transaction-visualization)
 
 
 
