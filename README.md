@@ -31,12 +31,14 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 ### Steps on Path a
 
 1. try Isabelle/HOL to see if proofs are really 5 times easier there
+    - By the way, about the trustworthiness, I would put Isabelle/HOL at least as good as Coq because Isabelle/HOL is based on a simpler deduction system (a deduction system is not a piece of software; it is a bunch of inference rules usually written in LaTeX)
 2. choose Coq or Isabelle/HOL
 3. verify `Deed` and some other simple bytecode programs against simple properties
 4. develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5))
 5. cover all opcodes
 6. modify Solidity to output such assertions between opcodes
 7. verify the name registrar for some desired safety properties
+8. try to automate the process of verification / finding vulnerabilities
 
 
 ## Path b. Verify Solidity Programs
@@ -48,13 +50,17 @@ not looking at the EVM bytecode.
 
 * The only way to know the meaning of a Solidity program is to compile it into bytecodes.
 * The Solidity compiler is changing fast and the verification tools would need to follow the changes
+* The verification tools tend to believe a different behavior from that of actually deployed bytecode
 
 ### Steps on this path
 
 The steps that have to be taken:
 
-1. Know Solidity program's meaning without checking the bytecode.  For this, one way is to write a Solidity interpreter in OCaml or SML.  Another way is to compile a Solidity program into WhyML or F*.
+1. Know Solidity program's meaning without checking the bytecode.  For this, one way is to write a Solidity interpreter in Coq or in an ML language.  Another way is to compile a Solidity program into WhyML or F*.
 2. Check the above against the reality.  We need a big set of tests to compare the above translation against the bytecode.
+3. The ML implementation can be translated into a proof assisstant (or we rely on Why3, in that case we need to trust the SMT solvers)
+4. 
+
 
 
 ## Path c. A Safe Programming Language
