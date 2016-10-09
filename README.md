@@ -11,13 +11,13 @@ no surprises happen after their deployment.
 
 * a [gitter channel](https://gitter.im/ethereum/formal-methods)
 * [Solidity](https://gitter.im/ethereum/solidity/)
-* a [Coq repo](https://github.com/pirapira/evmverif) and [screencast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
+* a [Coq repo](https://github.com/pirapira/evmverif) and a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
 
-## Path a: Verify EVM Byteodes (Currently Being Followed)
+## Path a: Verify EVM Bytecodes (Currently Being Followed)
 
 One way is to look at the EVM bytecodes.  They are executed on a simple virtual machine.  The rules of the virtual machine is well understood by different Ethereum clients which usually match (otherwise they fix the difference with uttermost priority).
-The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository, and there is a [screencast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz).
+The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository, and there is a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz).
 
 ### Obstacles
 
@@ -25,7 +25,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
     - I believe Isabelle/HOL provides much easier user experience (because it has a well-polished machine word library).  I'm porting the Coq attempt [into Isabelle/HOL](https://github.com/pirapira/eth-isabelle) (70% done within 2 days).
 * At the bytecode level, it's harder to see what the code is doing and what to expect.
     - One solution is to make the Solidity compiler [annotate the bytecode](https://github.com/ethereum/solidity/issues/1178) with the expected properties at specific code location.
-* At the bytecode level, Solidity array access looks like storage access with Kaccek hashes, and somehow we need to assume no collisions.  If I assume `∀ a, b. keccak(a) = keccak(b) -> a = b`, using the pidgeon hole argument, I can prove `0 = 1` and everything.
+* At the bytecode level, Solidity array access looks like storage access with Kaccek hashes, and somehow we need to assume no collisions.  If I assume `∀ a, b. keccak(a) = keccak(b) -> a = b`, using the pigeon hole argument, I can prove `0 = 1` and everything.
     - I can locally say `sorry` or `admit` to indicate that I give up proofs whenever I have to prove `keccak(a) != keccak(b)` because `a != b`.  Then the proofs would be incomplete and I cannot call my results "theorems", but I'm happy that way.  Anyway the compiler assumes no hash collisions without logical justification (but empirical).
 	- The module system of Coq provides [a clever workaround](https://github.com/bitemyapp/ledgertheory/blob/master/CryptoHashes.v).
 
@@ -44,7 +44,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 
 ## Path b. Verify Solidity Programs
 
-Another way would be to veryfy Solidity sources somehow,
+Another way would be to verify Solidity sources somehow,
 not looking at the EVM bytecode.
 
 ### Obstacles
@@ -59,7 +59,7 @@ The steps that have to be taken:
 
 1. Know Solidity program's meaning without checking the bytecode.  For this, one way is to write a Solidity interpreter in Coq or in an ML language.  Another way is to compile a Solidity program into WhyML or F*.
 2. Check the above against the reality.  We need a big set of tests to compare the above translation against the bytecode.
-3. The ML implementation can be translated into a proof assisstant (or we rely on Why3, in that case we need to trust the SMT solvers)
+3. The ML implementation can be translated into a proof assistant (or we rely on Why3, in that case we need to trust the SMT solvers)
 4. 
 
 
@@ -68,7 +68,7 @@ The steps that have to be taken:
 
 This alone does not verify smart contracts, but I have a chance to make it static analyzer friendly.
 
-The [bamboo copiler](https://github.com/pirapira/bamboo) is now producing snippets of bytecode for the empty contract (still lots to be done).
+The [bamboo compiler](https://github.com/pirapira/bamboo) is now producing snippets of bytecode for the empty contract (still lots to be done).
 
 The language has
 * no loops or recursions
