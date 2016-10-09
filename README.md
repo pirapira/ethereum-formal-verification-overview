@@ -1,4 +1,4 @@
-# Overview: Formal Verification of Smart Contracts (my projects only for now)
+# Formal Verification of Ethereum Contracts (Yoichi's attempts)
 
 This is the start page about my efforts around smart contract verification.
 
