@@ -14,7 +14,7 @@ no surprises happen after their deployment.
 * a [Coq repo](https://github.com/pirapira/evmverif) and a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
 
-## Path a: Verify EVM Bytecodes (Currently Being Followed)
+## Path a: Verification of EVM Bytecodes (Currently Being Followed)
 
 One way is to look at the EVM bytecodes.  They are executed on a simple virtual machine.  The rules of the virtual machine is well understood by different Ethereum clients which usually match (otherwise they fix the difference with uttermost priority).
 The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif/) repository, and there is a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz).
@@ -42,7 +42,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 8. try to automate the process of verification / finding vulnerabilities (3 months)
 
 
-## Path b. Verify Solidity Programs
+## Path b. Verification of Solidity Programs
 
 Another way would be to verify Solidity sources somehow,
 not looking at the EVM bytecode.
