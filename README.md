@@ -32,7 +32,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 ### Obstacles
 
 * Coq proofs are currently [lengthy](https://github.com/pirapira/evmverif/blob/master/coq/example/managed_account_with_accumulators.v#L405).
-    - I believe Isabelle/HOL provides much easier user experience (because it has a well-polished machine word library).  I'm porting the Coq attempt [into Isabelle/HOL](https://github.com/pirapira/eth-isabelle) (the general definitions have been ported; one example has been ported; two more examples to port).
+    - I believe Isabelle/HOL provides much easier user experience (because it has a well-polished machine word library).  I'm porting the Coq attempt [into Isabelle/HOL](https://github.com/pirapira/eth-isabelle) (the general definitions have been ported; two examples have been ported; maybe one more example to port).
 * At the bytecode level, it's harder to see what the code is doing and what to expect.
     - One solution is to make the Solidity compiler [annotate the bytecode](https://github.com/ethereum/solidity/issues/1178) with the expected properties at specific code location.
 * At the bytecode level, Solidity array access looks like storage access with Kaccek hashes, and somehow we need to assume no collisions.  If I assume `∀ a, b. keccak(a) = keccak(b) -> a = b`, using the pigeon hole argument, I can prove `0 = 1` and everything.
@@ -41,12 +41,12 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 
 ### Steps on Path a
 
-1. try Isabelle/HOL to see if proofs are really 5 times easier there (less than a week)
+1. ~~try Isabelle/HOL to see if proofs are really 5 times easier there (less than a week)~~
     - By the way, about the trustworthiness, I would put Isabelle/HOL at least as good as Coq because Isabelle/HOL is based on a simpler deduction system (a deduction system is not a piece of software; it is a bunch of inference rules usually written in LaTeX)
-2. choose Coq or Isabelle/HOL (overnight)
+2. ~~choose Coq or Isabelle/HOL (overnight)~~ I chose Isabelle/HOL over Coq.
 3. verify `Deed` and some other simple bytecode programs against simple properties (6-10 days)
-4. develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week)
-5. cover all opcodes (3 days)
+4. develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week; there is a [milestone](https://github.com/pirapira/eth-isabelle/milestone/1) for this item)
+5. cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).
 6. modify Solidity to output such assertions between opcodes (3 weeks)
 7. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
 8. try to automate the process of verification / finding vulnerabilities (3 months)
