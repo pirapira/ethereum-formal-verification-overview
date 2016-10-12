@@ -31,7 +31,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 
 ### Obstacles
 
-* Coq proofs are currently [lengthy](https://github.com/pirapira/evmverif/blob/master/coq/example/managed_account_with_accumulators.v#L405).
+* ~~Coq proofs are currently [lengthy](https://github.com/pirapira/evmverif/blob/master/coq/example/managed_account_with_accumulators.v#L405).~~ Isabelle/HOL made the proofs much shorter.
     - I believe Isabelle/HOL provides much easier user experience (because it has a well-polished machine word library).  I'm porting the Coq attempt [into Isabelle/HOL](https://github.com/pirapira/eth-isabelle) (the general definitions have been ported; two examples have been ported; maybe one more example to port).
 * At the bytecode level, it's harder to see what the code is doing and what to expect.
     - One solution is to make the Solidity compiler [annotate the bytecode](https://github.com/ethereum/solidity/issues/1178) with the expected properties at specific code location.
