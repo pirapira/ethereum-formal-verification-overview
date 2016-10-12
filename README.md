@@ -49,7 +49,8 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 5. cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).
 6. modify Solidity to output such assertions between opcodes (3 weeks)
 7. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
-8. try to automate the process of verification / finding vulnerabilities (3 months)
+8. [test the EVM implementation in Isabelle/HOL](https://github.com/pirapira/eth-isabelle/issues/5)
+9. try to automate the process of verification / finding vulnerabilities (3 months)
 
 
 ## Path b: Verification of Solidity programs
