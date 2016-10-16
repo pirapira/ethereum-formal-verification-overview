@@ -24,9 +24,9 @@ no surprises happen after their deployment.
 * [Transaction visualization](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-transaction-visualization)
 
 
-## What is formal methods
+## What are formal methods
 
-What is formal methods?  The word "formal" here is about looking at the shape, not at the meaning, of mathematical proofs.
+What are formal methods?  The word "formal" here is about looking at the shape, not at the meaning, of mathematical proofs.
 
 For a long time, mathematical proofs were read, understood and then checked.
 In some cases you can do calculations like "a + b - b = a" by just looking at the form, saying something like "this cancels that".
@@ -36,7 +36,7 @@ In the first half of 20th century, rigid languages appeared where proofs can be 
 [You can see examples here](http://us.metamath.org/mpegif/mmtheorems40.html#mm3944s).
 Maybe the computers do not understand the meaning, but they can check the proofs.
 
-When you translate mathmatical texts into such machine readable proofs, you are "formalizing" mathematics.
+When you translate mathematical texts into such machine-readable proofs, you are "formalizing" mathematics.
 Recent decades saw a tantalizing progress in this area: the [Flyspeck project](https://code.google.com/archive/p/flyspeck/wikis/AnnouncingCompletion.wiki) and [CoqFiniteGroups](https://gforge.inria.fr/projects/coqfinitgroup/) formalized big results from the past centuries.
 The [Homotopy Type Theory](https://homotopytypetheory.org/) was formalized from its very early stages.
 
