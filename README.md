@@ -16,12 +16,33 @@ no surprises happen after their deployment.
 
 ## The rest of the page
 
+* What is formal methods
 * [Verification of EVM bytecodes](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#path-a-verification-of-evm-bytecodes-currently-followed)
 * [Verification of Solidity Programs](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#path-b-verification-of-solidity-programs)
 * [A Safe Programming Language](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-a-safe-programming-language)
 * [Dr-Y's contract analyzer](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-dr-ys-contract-analyzer)
 * [Transaction visualization](https://github.com/pirapira/ethereum-formal-verification-overview/blob/master/README.md#sideway-transaction-visualization)
 
+
+## What is formal methods
+
+What is formal methods?  The word "formal" here is about looking at the shape, not at the meaning, of mathematical proofs.
+
+For a long time, mathematical proofs were read, understood and then checked.
+In some cases you can do calculations like "a + b - b = a" by just looking at the form, saying something like "this cancels that".
+Still, in the usual practice of mathematics, you ought to be able to explain what is going on.  You need to understand.
+
+In the first half of 20th century, rigid languages appeared where proofs can be checked by machines.
+[You can see examples here](http://us.metamath.org/mpegif/mmtheorems40.html#mm3944s).
+Maybe the computers do not understand the meaning, but they can check the proofs.
+
+When you translate mathmatical texts into such machine readable proofs, you are "formalizing" mathematics.
+Recent decades saw a tantalizing progress in this area: the [Flyspeck project](https://code.google.com/archive/p/flyspeck/wikis/AnnouncingCompletion.wiki) and [CoqFiniteGroups](https://gforge.inria.fr/projects/coqfinitgroup/) formalized big results from the past centuries.
+The [Homotopy Type Theory](https://homotopytypetheory.org/) was formalized from its very early stages.
+
+So far this was about mathematics.  The take away is, you can obtain infinitely many truths at one shot.
+The equality "a + b - b = a" is true for any natural numbers.
+By the way, here we have a smart contract, whose input is actually only finitely many.  Can we do something about this?
 
 
 ## Path a: Verification of EVM bytecodes (currently followed)
@@ -51,6 +72,11 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 7. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
 8. [test the EVM implementation in Isabelle/HOL](https://github.com/pirapira/eth-isabelle/issues/5)
 9. try to automate the process of verification / finding vulnerabilities (3 months)
+
+### Personal Account of the Struggle
+
+* My EVM in Isabelle/HOL says "your memory contents might change after you CALL another account", and I'm like "no, that's paranoid."
+
 
 
 ## Path b: Verification of Solidity programs
