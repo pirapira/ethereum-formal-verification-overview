@@ -37,7 +37,7 @@ In the first half of 20th century, rigid languages appeared where proofs can be 
 Maybe the computers do not understand the meaning, but they can check the proofs.
 
 When you translate mathematical texts into such machine-readable proofs, you are "formalizing" mathematics.
-Recent decades saw a tantalizing progress in this area: the [Flyspeck project](https://code.google.com/archive/p/flyspeck/wikis/AnnouncingCompletion.wiki) and [CoqFiniteGroups](https://gforge.inria.fr/projects/coqfinitgroup/) formalized big results from the past centuries.
+Recent decades saw a tantalizing progress in this area. The [Flyspeck project](https://code.google.com/archive/p/flyspeck/wikis/AnnouncingCompletion.wiki) and [CoqFiniteGroups](https://gforge.inria.fr/projects/coqfinitgroup/) formalized big results from the past centuries.
 The [Homotopy Type Theory](https://homotopytypetheory.org/) was formalized from its very early stages.
 
 So far this was about mathematics.  The take away is, you can obtain infinitely many truths at one shot.
