@@ -67,10 +67,10 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
     - By the way, about the trustworthiness, I would put Isabelle/HOL at least as good as Coq because Isabelle/HOL is based on a simpler deduction system (a deduction system is not a piece of software; it is a bunch of inference rules usually written in LaTeX)
 2. ~~choose Coq or Isabelle/HOL (overnight)~~ I chose Isabelle/HOL over Coq.
 3. ~~verify `Deed` and some other simple bytecode programs against simple properties (6-10 days)~~ This is finished and there is a [report](https://yoichihirai.com/deed.pdf).
-4. translate the definitions into Lem (2 weeks)
-5. develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week; there is a [milestone](https://github.com/pirapira/eth-isabelle/milestone/1) for this item)
-6. cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).
-7. test the new EVM against the standard VM tests (4 weeks)
+4. translate the definitions into Lem (2 weeks; almost done except the Keccak hash)
+5. ~~develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week; there is a [milestone](https://github.com/pirapira/eth-isabelle/milestone/1) for this item)~~
+6. cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).  (Mostly done, but LOGx does nothing right now.)
+7. test the new EVM against the standard VM tests (4 weeks; started, now parsing the tests)
 8. modify Solidity to output such assertions between opcodes (3 weeks)
 9. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
 10. [test the EVM implementation in Isabelle/HOL](https://github.com/pirapira/eth-isabelle/issues/5)
@@ -81,7 +81,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 * My EVM in Isabelle/HOL says "your memory contents might change after you CALL another account", and I'm like "no, that's paranoid."
 * The verification of Deed contract finishes.  I break the contract to see what happens, then the proofs still work.  I had a bug in my JUMPI implementation.
 * I try to verify the Deed contract again, I cannot prove the safety property anymore, and I find that one precondition was missing about `active` flag.
-
+* I added gas to the EVM and run the Deed proofs again, it now takes overnight.  I forgot to `time` it.
 
 ## Path b: Verification of Solidity programs
 
