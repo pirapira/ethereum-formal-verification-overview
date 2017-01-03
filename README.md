@@ -67,14 +67,17 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
     - By the way, about the trustworthiness, I would put Isabelle/HOL at least as good as Coq because Isabelle/HOL is based on a simpler deduction system (a deduction system is not a piece of software; it is a bunch of inference rules usually written in LaTeX)
 2. ~~choose Coq or Isabelle/HOL (overnight)~~ I chose Isabelle/HOL over Coq.
 3. ~~verify `Deed` and some other simple bytecode programs against simple properties (6-10 days)~~ This is finished and there is a [report](https://yoichihirai.com/deed.pdf).
-4. translate the definitions into Lem (2 weeks; almost done except the Keccak hash)
+4. ~~translate the definitions into Lem (2 weeks; almost done except the Keccak hash)~~ done.
 5. ~~develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week; there is a [milestone](https://github.com/pirapira/eth-isabelle/milestone/1) for this item)~~
-6. cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).  (Mostly done, but LOGx does nothing right now.)
-7. test the new EVM against the standard VM tests (4 weeks; started, now parsing the tests)
-8. modify Solidity to output such assertions between opcodes (3 weeks)
-9. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
-10. [test the EVM implementation in Isabelle/HOL](https://github.com/pirapira/eth-isabelle/issues/5)
-11. try to automate the process of verification / finding vulnerabilities (3 months)
+6. ~~cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).  mostly done,~~ [but LOGx does nothing right now](https://github.com/pirapira/eth-isabelle/issues/94)
+7. ~~test the new EVM against the standard VM tests (4 weeks; started, now parsing the tests)~~ mostly done. [but VM tests involving multiple contracts are still skipped](https://github.com/pirapira/eth-isabelle/issues/95)
+8. build a simple Hoare logic
+9. build a [Tan-style](https://www.cs.princeton.edu/research/techreps/TR-731-05) logic
+10. build a small-step relational semantics that equates all failures (mainly for the speed of the verification)
+11. modify Solidity to output such assertions between opcodes (3 weeks)
+12. verify the name registrar for some desired safety properties (2=5 weeks; now hard to guess)
+13. [test the EVM implementation in Isabelle/HOL](https://github.com/pirapira/eth-isabelle/issues/5)
+14. try to automate the process of verification / finding vulnerabilities (3 months)
 
 ### Personal Account of the Struggle
 
@@ -82,6 +85,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 * The verification of Deed contract finishes.  I break the contract to see what happens, then the proofs still work.  I had a bug in my JUMPI implementation.
 * I try to verify the Deed contract again, I cannot prove the safety property anymore, and I find that one precondition was missing about `active` flag.
 * I added gas to the EVM and run the Deed proofs again, it now takes overnight.  I forgot to `time` it.
+* The OCaml extraction and the Isabelle/HOL extraction were using different endianness in the hash implementation.
 
 ## Path b: Verification of Solidity programs
 
