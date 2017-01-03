@@ -71,7 +71,7 @@ The current attempt in Coq is in [evmverif](https://github.com/pirapira/evmverif
 5. ~~develop a method how to verify assertions between opcodes (this is [evmverif#5](https://github.com/pirapira/evmverif/issues/5)) (a week; there is a [milestone](https://github.com/pirapira/eth-isabelle/milestone/1) for this item)~~
 6. ~~cover all opcodes (3 days): this is already in progress. A [milestone](https://github.com/pirapira/eth-isabelle/milestone/2).  mostly done,~~ [but LOGx does nothing right now](https://github.com/pirapira/eth-isabelle/issues/94)
 7. ~~test the new EVM against the standard VM tests (4 weeks; started, now parsing the tests)~~ mostly done. [but VM tests involving multiple contracts are still skipped](https://github.com/pirapira/eth-isabelle/issues/95)
-8. build a simple Hoare logic
+8. [build a simple Hoare logic](https://github.com/pirapira/eth-isabelle/milestone/4)
 9. build a [Tan-style](https://www.cs.princeton.edu/research/techreps/TR-731-05) logic
 10. build a small-step relational semantics that equates all failures (mainly for the speed of the verification)
 11. modify Solidity to output such assertions between opcodes (3 weeks)
