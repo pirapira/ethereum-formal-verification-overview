@@ -7,6 +7,12 @@ This is the start page about my efforts around smart contract verification.
 The goal is to establish a method how to verify a smart contract so that
 no surprises happen after their deployment.
 
+## Talks
+
+* gave a talk in DEVCON 1
+* Berlin, 2016-11-1; gave [a talk](https://yoichihirai.com/deedtalk.pdf) in Berlin Ethereum Meetup
+* [Paris, EDCON, 2017-02-17](https://edcon.io/)
+
 ## Links
 
 * _every update comes here_: a [gitter channel](https://gitter.im/ethereum/formal-methods)
