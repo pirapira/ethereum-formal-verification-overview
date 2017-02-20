@@ -11,7 +11,7 @@ no surprises happen after their deployment.
 
 * gave a talk in DEVCON 1
 * Berlin, 2016-11-1; gave [a talk](https://yoichihirai.com/deedtalk.pdf) in Berlin Ethereum Meetup ([video](https://www.youtube.com/watch?v=cCUGMAnCh7o&list=PLaM7G4Llrb7wPiT2G75tj2JQr8qg6P5hi&index=3))
-* [Paris, EDCON, 2017-02-17](https://edcon.io/)
+* Paris, EDCON, 2017-02-17, gave [a talk](https://yoichihirai.com/edcon-yoichi-hirai.pdf)
 
 ## Links
 
