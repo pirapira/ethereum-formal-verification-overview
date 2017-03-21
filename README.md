@@ -117,6 +117,12 @@ The steps that have to be taken:
 5. Automate the process, maybe by deep-embedding some kind of Hoare logic
 
 
+## Sideway: Formal Verificaton of Proof-of-Stake Protocols
+
+* Vitalik's Casper with dynamic validator sets https://medium.com/@pirapira/a-mechanized-safety-proof-for-pos-with-dynamic-validators-17e9b45faff4#.94adc75cm
+* Vlad's Casper until Consensus Safety https://medium.com/@pirapira/formal-methods-on-another-casper-8a75f6e02073#.qdps9277i
+* Vitalik's Capser with static validator set https://medium.com/@pirapira/formal-methods-on-some-pos-stuff-e309775c2ab8#.vaaa77dut
+
 
 ## Sideway: a safe programming language
 
