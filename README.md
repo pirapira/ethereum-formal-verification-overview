@@ -159,3 +159,4 @@ This is useful after a surprise.
 
 * [oyente](https://github.com/ethereum/oyente)
 * [ethereum-lem](https://github.com/mrsmkl/ethereum-lem)
+* [EVM in K framework](https://github.com/kframework/evm-semantics)
