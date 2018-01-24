@@ -12,7 +12,7 @@ no surprises happen after their deployment.
 * gave a talk in DEVCON 1
 * Berlin, 2016-11-1; gave [a talk](https://yoichihirai.com/deedtalk.pdf) in Berlin Ethereum Meetup ([video](https://www.youtube.com/watch?v=cCUGMAnCh7o&list=PLaM7G4Llrb7wPiT2G75tj2JQr8qg6P5hi&index=3))
 * Paris, EDCON, 2017-02-17 [slide](https://yoichihirai.com/edcon-yoichi-hirai.pdf) [video](https://www.youtube.com/watch?v=P98SZ-PznaU)
-* [TODO] add the talk at ARM Research Summit
+* Cambridge, ARM Research Summit, 2017-09-13 [slide](https://yoichihirai.com/cambridge2017.pdf)
 
 ## Links
 
