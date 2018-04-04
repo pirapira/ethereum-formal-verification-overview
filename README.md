@@ -163,3 +163,8 @@ This is useful after a surprise.
 * [ethereum-lem](https://github.com/mrsmkl/ethereum-lem)
 * [EVM in K framework](https://github.com/kframework/evm-semantics)
 * [Scilla: a Smart Contract Intermediate Level LAnguage](https://arxiv.org/pdf/1801.00687.pdf)
+
+### An Incomplete List of Papers I Saw
+
+* [Online Detection of Effectively Callback Free Objects with Applications to Smart Contracts](https://arxiv.org/pdf/1801.04032.pdf)
+    - most Ethereum transactions so far are "effectively call back free"
