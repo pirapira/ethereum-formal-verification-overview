@@ -118,6 +118,10 @@ The steps that have to be taken:
 4. Try to assert properties in a shallow-embedded way and write proofs
 5. Automate the process, maybe by deep-embedding some kind of Hoare logic
 
+### Related Projects
+
+* [a specification of Vyper language in K framework](https://github.com/kframework/vyper-semantics/wiki)
+
 
 ## Sideway: Formal Verificaton of Proof-of-Stake Protocols
 
