@@ -20,7 +20,7 @@ no surprises happen after their deployment.
 * an [Isabelle/HOL repo](https://github.com/pirapira/eth-isabelle)
 * [Solidity](https://gitter.im/ethereum/solidity/)
 * a [Coq repo](https://github.com/pirapira/evmverif) and a [screen cast](https://youtu.be/Mzh4fyoaBJ0?list=PL9oaY6Y4QxRZybj86eGItGVApxLXVIXHz)
-* [FP Ethereum community](https://github.com/fp-ethereum/fp-ethereum)
+* [EVM Lang Design](https://github.com/evm-lang-design/evm-lang-design)
 
 ## The rest of the page
 
